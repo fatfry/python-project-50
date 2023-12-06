@@ -1,7 +1,0 @@
-.env/
-dist/
-*.pyc
-.coverage
-coverage.xml
-.pytest_cache/
-.idea/
