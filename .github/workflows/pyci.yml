@@ -1,0 +1,24 @@
+name: pyci
+
+on:
+  - push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.10.12, 3.12]
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup python
+        uses: action/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: install dependencies
+        run: pip install poetry && make install
+      - name: run Linter
+        run: make lint
+      - name: run Test
+        run: make test
