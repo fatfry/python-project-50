@@ -1,6 +1,3 @@
-import json
-
-
 def to_str(value):
     if isinstance(value, bool):
         return str(value).lower()
@@ -8,9 +5,7 @@ def to_str(value):
         return value
 
 
-def gendiff_diff(file1, file2):
-    data1 = json.load(open(file1))
-    data2 = json.load(open(file2))
+def gendiff_diff(data1, data2):
 
     keys = sorted(data1.keys() | data2.keys())
     result = []
