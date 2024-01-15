@@ -1,6 +1,5 @@
-import json
 import pytest
-from gendiff.gendiff_build import gendiff_diff
+from diff_yml import gendiff
 from pathlib import Path
 
 
@@ -19,7 +18,7 @@ def tests_gendiff():
     expected_result = get_fixtures_data('result_json')
     file1 = get_fixtures_path('file1.json')
     file2 = get_fixtures_path('file2.json')
-    assert gendiff_diff(file1, file2) == expected_result
-
-
-
+    assert gendiff(file1, file2) == expected_result
+    file1 = get_fixtures_path('file1.yml')
+    file2 = get_fixtures_path('file2.yml')
+    assert gendiff(file1, file2) == expected_result
