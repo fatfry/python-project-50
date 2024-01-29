@@ -8,4 +8,4 @@ def parse(data, extension):
     if extension == 'yml':
         return yaml.safe_load(data)
     else:
-        raise ValueError('Неподдерживаемый формат файла ')
+        raise ValueError('Неподдерживаемый формат файла')

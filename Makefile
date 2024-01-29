@@ -23,4 +23,4 @@ selfcheck:
 build:
 	poetry build
 
-#.PHONY: install test lint selfcheck check build
+#.PHONY: install test lint selfcheck check build package-install

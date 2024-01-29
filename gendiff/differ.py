@@ -1,6 +1,7 @@
 import os
-from gendiff_build import gendiff_diff
-from parser import parse
+
+from gendiff.parser import parse
+from gendiff.gendiff_build import gendiff_diff
 
 
 def gendiff(file1, file2):
@@ -19,5 +20,5 @@ def get_file_extension(file_path):
     return extension[1:]
 
 
-print(gendiff('/home/oleg/python-project-50/tests/fixtures/file2.json',
-              '/home/oleg/python-project-50/tests/fixtures/file1.yml'))
+# print(gendiff('/home/oleg/python-project-50/tests/fixtures/file2.json',
+#               '/home/oleg/python-project-50/tests/fixtures/file1.yml'))
