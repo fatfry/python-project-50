@@ -5,3 +5,8 @@ dist/
 coverage.xml
 .pytest_cache/
 .idea/
+/.venv/
+/.idea/
+.DS_Store
+__pycache__
+/dist/
