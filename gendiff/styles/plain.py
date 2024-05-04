@@ -1,5 +1,5 @@
 
-from gendiff.constants import CHANGES_TYPES
+from gendiff.constants import CHANGES_FORMATS
 
 
 def checking_value(value):
@@ -19,18 +19,18 @@ def to_plain(data):
         for key, value in data.items():
             print_path = f"{path}.{key}" if path else f'{key}'
             match value['type']:
-                case CHANGES_TYPES.REMOVED:
+                case CHANGES_FORMATS.REMOVED:
                     result.append(f"Property '{print_path}' was removed")
-                case CHANGES_TYPES.ADDED:
+                case CHANGES_FORMATS.ADDED:
                     result.append(f"Property '{print_path}' was added with "
                                   f"value: {checking_value(value['value'])}")
-                case CHANGES_TYPES.UPDATED:
+                case CHANGES_FORMATS.UPDATED:
                     result.append(f"Property '{print_path}' was updated. "
                                   f"From {checking_value(value['old_value'])} "
                                   f"to {checking_value(value['new_value'])}")
-                case CHANGES_TYPES.NESTED:
+                case CHANGES_FORMATS.NESTED:
                     result.extend(_iter_plain(value['value'], print_path))
-                case CHANGES_TYPES.UNCHANGED:
+                case CHANGES_FORMATS.UNCHANGED:
                     continue
                 case _:
                     raise ValueError(f'Unknown type: {value["type"]}')

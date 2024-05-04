@@ -1,4 +1,4 @@
-from gendiff.constants import CHANGES_TYPES, INDENT
+from gendiff.constants import CHANGES_FORMATS, INDENT
 
 
 def build_indent(depth):
@@ -36,21 +36,21 @@ def to_stylish(data):
         result = []
         for key, value in data.items():
             match value['type']:
-                case CHANGES_TYPES.REMOVED:
+                case CHANGES_FORMATS.REMOVED:
                     result.append(f'{build_indent(depth)}- {key}: '
                                   f'{to_string(value["value"], depth + 1)}')
-                case CHANGES_TYPES.ADDED:
+                case CHANGES_FORMATS.ADDED:
                     result.append(f'{build_indent(depth)}+ {key}: '
                                   f'{to_string(value["value"], depth + 1)}')
-                case CHANGES_TYPES.UPDATED:
+                case CHANGES_FORMATS.UPDATED:
                     result.append(f'{build_indent(depth)}- {key}: '
                                   f'{to_string(value["old_value"], depth + 1)}')
                     result.append(f'{build_indent(depth)}+ {key}: '
                                   f'{to_string(value["new_value"], depth + 1)}')
-                case CHANGES_TYPES.UNCHANGED:
+                case CHANGES_FORMATS.UNCHANGED:
                     result.append(f'{build_indent(depth)}  {key}: '
                                   f'{to_string(value["value"], depth + 1)}')
-                case CHANGES_TYPES.NESTED:
+                case CHANGES_FORMATS.NESTED:
                     result.append(f'{build_indent(depth)}  {key}: '
                                   f'{_iter_stylish(value["value"], depth + 1)}')
                 case _:
