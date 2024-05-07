@@ -43,34 +43,27 @@ options:
 
 `gendiff file1.json file2.json`
 
-[![asciicast](https://asciinema.org/a/631993.svg)](https://asciinema.org/a/631993)
-
-### Comparison of flat files (YAML, YML)
+[![asciicast](https://asciinema.org/a/rRMsv3vhYJfAqnZqBBPjKc0XZ.svg)](https://asciinema.org/a/rRMsv3vhYJfAqnZqBBPjKc0XZ)### Comparison of flat files (YAML, YML)
 
 `gendiff file1.yml file2.yml`
 
-[![asciicast](https://asciinema.org/a/631994.svg)](https://asciinema.org/a/631994)
-
-### Comparison of two files with a nested structure (JSON)
-
+[![asciicast](https://asciinema.org/a/dTzMIdYUNRERfeHlR7DEz5thO.svg)](https://asciinema.org/a/dTzMIdYUNRERfeHlR7DEz5thO)
 `gendiff nested_file1.json nested_file2.json`
 
-[![asciicast](https://asciinema.org/a/631995.svg)](https://asciinema.org/a/631995)
+[![asciicast](https://asciinema.org/a/V1rgYC6F1ALe8NwAVSS4iZMZh.svg)](https://asciinema.org/a/V1rgYC6F1ALe8NwAVSS4iZMZh)
 
 ### Comparison of two files with a nested structure (YML, YAML)
 
 `gendiff nested_file1.yml nested_file2.yml`
 
-[![asciicast](https://asciinema.org/a/631997.svg)](https://asciinema.org/a/631997)
-
+[![asciicast](https://asciinema.org/a/PF9ipTUJMJ0B86my9Hlke2Qdj.svg)](https://asciinema.org/a/PF9ipTUJMJ0B86my9Hlke2Qdj)
 ### Comparison using Plain style
 
-`gendiff -f plain nested_file1.json nested_file2.json`
+`gendiff -f plain nested_file1.yml nested_file2.yml`
 
-[![asciicast](https://asciinema.org/a/631998.svg)](https://asciinema.org/a/631998)
-
+[![asciicast](https://asciinema.org/a/a58YCmWsZ2hkWXoE5vJ2OADiL.svg)](https://asciinema.org/a/a58YCmWsZ2hkWXoE5vJ2OADiL)
 ### Comparison using Json style
 
 `gendiff -f json filepath1.json filepath2.json`
 
-[![asciicast](https://asciinema.org/a/631999.svg)](https://asciinema.org/a/631999)
+[![asciicast](https://asciinema.org/a/thF6wmGF6TlzWD13CX2GmDE7M.svg)](https://asciinema.org/a/thF6wmGF6TlzWD13CX2GmDE7M)

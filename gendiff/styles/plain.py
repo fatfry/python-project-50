@@ -1,4 +1,3 @@
-
 from gendiff.constants import CHANGES_FORMATS
 
 
