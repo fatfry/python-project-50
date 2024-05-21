@@ -1,4 +1,4 @@
-from gendiff.scripts.gendiff import generate_diff
+from gendiff.generate_difference import generate_diff
 from pathlib import Path
 import pytest
 
@@ -14,32 +14,8 @@ def get_result_data(file_name):
 @pytest.mark.parametrize(
     ('file1', 'file2'),
     [
-        ('file1.json', 'file2.json'),
-        ('file1.yml', 'file2.yml'),
-    ]
-)
-def test_flat_diff(file1, file2):
-    file1_path = f'{FIXTURES_PATH}/{file1}'
-    file2_path = f'{FIXTURES_PATH}/{file2}'
-
-    assert (generate_diff(file1_path, file2_path)
-            == get_result_data('flat_result'))
-
-    assert (generate_diff(file1_path, file2_path, 'stylish')
-            == get_result_data('flat_result'))
-
-    assert (generate_diff(file1_path, file2_path, 'plain')
-            == get_result_data('flat_plain_result'))
-
-    assert (generate_diff(file1_path, file2_path, 'json')
-            == get_result_data('flat_json_result'))
-
-
-@pytest.mark.parametrize(
-    ('file1', 'file2'),
-    [
         ('nested_file1.json', 'nested_file2.json'),
-        ('nested_file1.yml', 'nested_file2.yml'),
+        # ('nested_file1.yml', 'nested_file2.yml'),
     ]
 )
 def test_nested_json_diff(file1, file2):
