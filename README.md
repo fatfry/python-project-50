@@ -4,6 +4,7 @@
 ### Hexlet tests and linter status:
 [![hexlet-check](https://github.com/fatfry/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/fatfry/python-project-50/actions/workflows/hexlet-check.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6d00a5cc809dc6d9461c/maintainability)](https://codeclimate.com/github/fatfry/python-project-50/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6d00a5cc809dc6d9461c/test_coverage)](https://codeclimate.com/github/fatfry/python-project-50/test_coverage)
 ## Description
 
 
