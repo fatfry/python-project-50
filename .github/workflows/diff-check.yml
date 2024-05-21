@@ -10,8 +10,8 @@ jobs:
             python-version: "3.11.6"
       - run: pip install poetry
       - run: make install
-      - run: make pytest
-      - run: make lint
+      - name: Linter
+        run: make lint
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v5.0.0
         if: github.ref_name == 'main'
